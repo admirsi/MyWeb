@@ -16,3 +16,8 @@ Description: {{ site.db.description | join: ", " }}
 Size: {{ site.db.size}}
 Price {{ site.db.price}}
 {% endraw %}
+
+```json
+{% raw %}
+{% include db.json %}
+{% endraw %}
