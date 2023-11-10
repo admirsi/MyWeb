@@ -1,0 +1,19 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $.getJSON("db.json", function(data){
+      var output = "<ul>";
+      $.each(data, function(key, value){
+        output += "<li>" + value.productName + "</li>";
+        output += "<li><img src='" + value.imageFile + "'></li>";
+        output += "<li>" + value.description + "</li>";
+        output += "<li>" + value.size + " ml</li>";
+        output += "<li>" + value.price + " KM</li>";
+        output += "<hr>";
+      });
+      output += "</ul>";
+      $("#result").html(output);
+    });
+  });
+</script>
+<div id="result"></div>
